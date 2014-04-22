@@ -37,3 +37,29 @@ function LongestWord(sen) {
     }
     return maxWord;
 }
+
+function LetterChanges(str) {
+
+    var newstr = "";
+    var word = "";
+    var validletter = /^[a-zA-Z]+$/;
+
+
+    for (var i = 0; i < str.length; i++) { //Get all the letters
+        if (!validletter.test(str[i])) { //check for valid letters
+            newstr = str[i];             //takes care of numbers and spaces and special char
+        } else if (str[i] === 'z' || str[i] === 'Z') { //converts z to a (both cases)
+            newstr = String.fromCharCode(str[i].charCodeAt(0));
+        } else {
+            newstr = String.fromCharCode(str[i].charCodeAt(0) + 1); //do other letters
+        }
+        //Do vowels
+        if (newstr === 'a' || newstr === 'e' || newstr === 'o' || newstr === 'u') {
+            newstr = newstr.toUpperCase();
+        }
+        word = word + newstr; //all to the entire string
+    }
+
+    return word;
+
+}
