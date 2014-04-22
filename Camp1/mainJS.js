@@ -12,6 +12,7 @@ function FirstFactorial(num) {
     for (var i = 1; i < num + 1; i++) {
         mysum = mysum * i;
     }
+    //Return 
     return mysum;
 
 }
