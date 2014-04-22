@@ -63,3 +63,14 @@ function LetterChanges(str) {
     return word;
 
 }
+
+function SimpleAdding(num) {
+
+    // code goes here 
+    var newNum = 0;
+    for (var i = 1; i < num + 1; i++) {
+        newNum += i;
+    }
+    return newNum;
+
+}
